@@ -46,6 +46,8 @@ pipeline {
         always {
             junit testResults: 'target/surefire-reports/*.xml',
                   allowEmptyResults: true
+
+            sh 'docker image rm gilded-rose-kata:${BUILD_NUMBER} || true'
         }
 
         success {
