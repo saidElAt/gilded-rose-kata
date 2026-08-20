@@ -27,6 +27,12 @@ pipeline {
                 sh 'java -jar target/gilded-rose-kata-1.0-SNAPSHOT.jar'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t gilded-rose-kata:${BUILD_NUMBER} .'
+            }
+        }
     }
 
     post {
