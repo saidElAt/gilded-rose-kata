@@ -33,6 +33,12 @@ pipeline {
                 sh 'docker build -t gilded-rose-kata:${BUILD_NUMBER} .'
             }
         }
+
+        stage('Docker Smoke Test') {
+            steps {
+                sh 'docker run --rm gilded-rose-kata:${BUILD_NUMBER}'
+            }
+        }
     }
 
     post {
