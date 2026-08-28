@@ -40,3 +40,7 @@ build/
 # Ansible local SSH credentials
 ansible/keys/
 ansible/target/authorized_keys
+
+# Keep Ansible target definition under version control
+!ansible/target/
+!ansible/target/Dockerfile
