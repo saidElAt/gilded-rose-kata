@@ -44,3 +44,10 @@ ansible/target/authorized_keys
 # Keep Ansible target definition under version control
 !ansible/target/
 !ansible/target/Dockerfile
+
+# Terraform local state
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfplan
+terraform/.terraform.tfstate.lock.info
