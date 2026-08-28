@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Ansible local SSH credentials
+ansible/keys/
+ansible/target/authorized_keys
